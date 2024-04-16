@@ -7,6 +7,7 @@
 */
 package com.puppycrawl.tools.checkstyle.checks.coding.unusedlocalvariable;
 
+import io.github.pixee.security.BoundedLineReader;
 import java.io.*;
 import java.util.function.Predicate;
 // xdoc section -- start
@@ -35,7 +36,7 @@ class Example1 {
   void read() throws IOException {
     BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
     String s; // violation, unused local variable 's'
-    while ((s = reader.readLine()) != null) {}
+    while ((s = BoundedLineReader.readLine(reader, 5_000_000)) != null) {}
     try (BufferedReader reader1 = // ok, 'reader1' is a resource
                  new BufferedReader(new FileReader("abc.txt"))) {}
     try {
