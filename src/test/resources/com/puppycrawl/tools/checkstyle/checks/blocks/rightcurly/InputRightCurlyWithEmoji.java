@@ -66,7 +66,9 @@ public class InputRightCurlyWithEmoji {
     }
 
     String method4(String a) {
-        if (a.equals("🎄")) a = "😆"; return "😆🤩"; }
+        if (a.equals("🎄")) {
+            a = "😆";
+        } return "😆🤩"; }
     // violation above ''}' at column 50 should have line break before.'
 
     public void foo4() {String a = "😆🤩";}

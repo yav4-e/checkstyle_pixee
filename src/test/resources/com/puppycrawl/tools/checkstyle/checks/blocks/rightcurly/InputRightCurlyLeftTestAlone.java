@@ -67,9 +67,13 @@ class InputRightCurlyLeftTestAlone
 
         // test input for bug reported by Joe Comuzzi
         if (System.currentTimeMillis() > 1000)
-            return 1;
+            {
+                return 1;
+            }
         else
-            return 2;
+            {
+                return 2;
+            }
     }
 
     // Test static initialiser
