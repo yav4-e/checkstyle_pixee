@@ -178,7 +178,9 @@ enum MyEnum1 {
         String myInt = ( number.toString() + '\0' ); // 2 violations
         boolean result = false;
         if (number == 123)
-            result = true;
+            {
+                result = true;
+            }
     }
 
     private static String getterName( Exception t) { // violation

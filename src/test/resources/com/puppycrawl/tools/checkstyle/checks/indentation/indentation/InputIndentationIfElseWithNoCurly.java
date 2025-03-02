@@ -17,13 +17,17 @@ public class InputIndentationIfElseWithNoCurly { //indent:0 exp:0
     void test() { //indent:4 exp:4
         if (true); //indent:8 exp:8
         if (true) //indent:8 exp:8
-expression(); //indent:0 exp:12 warn
+{
+    expression();
+} //indent:0 exp:12 warn
         if (true) //indent:8 exp:8
             expression(); //indent:12 exp:12
         if (true) //indent:8 exp:8
                 expression(); //indent:16 exp:16
     if (true) //indent:4 exp:8 warn
-        expression(); //indent:8 exp:12 warn
+        {
+            expression();
+        } //indent:8 exp:12 warn
         if(true) //indent:8 exp:8
             expression(); //indent:12 exp:12
         else expression(); //indent:8 exp:8
@@ -45,8 +49,10 @@ expression(); //indent:0 exp:12 warn
             a = true //indent:12 exp:12
                     && false; //indent:20 exp:20
         if (true) //indent:8 exp:8
-            a = true //indent:12 exp:12
-                && false; //indent:16 exp:16
+            {
+                a = true //indent:12 exp:12
+                && false;
+            } //indent:16 exp:16
     } //indent:4 exp:4
 
     void expression() {} //indent:4 exp:4

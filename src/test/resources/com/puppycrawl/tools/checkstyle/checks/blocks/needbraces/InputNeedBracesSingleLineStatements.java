@@ -24,7 +24,9 @@ public class InputNeedBracesSingleLineStatements
     }
 
     private int foo1() {
-        if (SomeClass.test(true)) return 4; int k = 3; //No warning if 'mAllowSingleLineIf' is true
+        if (SomeClass.test(true)) {
+            return 4;
+        } int k = 3; //No warning if 'mAllowSingleLineIf' is true
         return 0;
     }
 

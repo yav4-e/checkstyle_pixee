@@ -27,7 +27,9 @@ public class InputRightCurlyWithEmojiAloneOrSingleLine {
     }
 
     String method4(String a) {
-        if (a.equals("🎄")) ; return "😆🤩"; }
+        if (a.equals("🎄")) {
+            ;
+        } return "😆🤩"; }
     // violation above ''}' at column 43 should be alone on a line.'
     void method5(String a, int b) {
         while ("👈🏻🧐".length() > 5) { ; }

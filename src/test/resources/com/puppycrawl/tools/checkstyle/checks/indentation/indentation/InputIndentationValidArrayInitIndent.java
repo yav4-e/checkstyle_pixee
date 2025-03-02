@@ -114,7 +114,9 @@ public class InputIndentationValidArrayInitIndent { //indent:0 exp:0
         }); //indent:8 exp:8
         for (String veryLongVariableName: new String[] //indent:8 exp:8
         {"this is text", "this is text"}) { //indent:8 exp:8
-            if (hashCode() == 0) break; //indent:12 exp:12
+            if (hashCode() == 0) {
+                break;
+            } //indent:12 exp:12
         } //indent:8 exp:8
     } //indent:4 exp:4
 
