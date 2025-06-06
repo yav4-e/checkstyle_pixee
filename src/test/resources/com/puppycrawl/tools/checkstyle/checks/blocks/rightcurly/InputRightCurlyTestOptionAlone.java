@@ -48,7 +48,9 @@ public class InputRightCurlyTestOptionAlone {
     }
 
     int method4(int a) {
-        if (a>2) a*=10; return ++a; } // violation ''}' at column 37 should be alone on a line'
+        if (a>2) {
+            a*=10;
+        } return ++a; } // violation ''}' at column 37 should be alone on a line'
 
     void method5(int a) {
         while (a > 5) { a--; } // violation ''}' at column 30 should be alone on a line'

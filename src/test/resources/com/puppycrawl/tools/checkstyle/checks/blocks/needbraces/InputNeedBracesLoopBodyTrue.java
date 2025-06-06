@@ -16,7 +16,9 @@ public class InputNeedBracesLoopBodyTrue {
 
     {
         value = 0;
-        while(incrementValue() < 5);;
+        while(incrementValue() < 5){
+            ;
+        };
     }
 
     public void foo() {
